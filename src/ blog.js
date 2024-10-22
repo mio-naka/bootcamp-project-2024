@@ -1,4 +1,5 @@
 "use strict";
+// list of Blogs
 const blogs = [
     {
         title: "My first blog",
@@ -17,36 +18,35 @@ const blogs = [
         slug: "My second blog",
     },
 ];
+// Function to Iterate Over the List of Blogs
 function appendBlogsToPage(blogs) {
     // Access the blog container in the HTML
     const blogContainer = document.getElementById('blog-container');
+    // check to see if it was properly found
     if (!blogContainer) {
         console.error("Blog container not found!");
         return;
     }
+    // iterating
     blogs.forEach(blog => {
         // Logic for creating and appending blog elements
-        // Create a div for each blog post
+        // div for each blog post
         const blogDiv = document.createElement('div');
-        blogDiv.classList.add('blog-post'); // Add a class for styling if needed
-        // Create an h1 element for the title
-        const titleElement = document.createElement('h1');
-        titleElement.textContent = blog.title;
-        // Create an img element for the blog image
-        const imageElement = document.createElement('img');
-        imageElement.src = blog.image;
-        imageElement.alt = blog.imageAlt;
-        // Create a p element for the description
-        const descriptionElement = document.createElement('p');
-        descriptionElement.textContent = blog.description;
-        // Create a small element for the date
-        const dateElement = document.createElement('small');
-        dateElement.textContent = `Published on: ${blog.date}`;
-        // Append title, image, description, and date to the blog div
-        blogDiv.appendChild(titleElement);
-        blogDiv.appendChild(imageElement);
-        blogDiv.appendChild(descriptionElement);
-        blogDiv.appendChild(dateElement);
+        blogDiv.classList.add('blog-post');
+        // h1 element for the title
+        const blogTitle = document.createElement('h1');
+        blogTitle.textContent = blog.title;
+        // img element for the blog image
+        const blogImage = document.createElement('img');
+        blogImage.src = blog.image;
+        blogImage.alt = blog.imageAlt;
+        // p element for the description
+        const blogDescription = document.createElement('p');
+        blogDescription.textContent = blog.description;
+        // Append title, image, description to the blog div
+        blogDiv.appendChild(blogTitle);
+        blogDiv.appendChild(blogImage);
+        blogDiv.appendChild(blogDescription);
         // Append the blog div to the blog container
         blogContainer.appendChild(blogDiv);
     });
