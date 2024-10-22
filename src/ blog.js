@@ -1,6 +1,6 @@
-console.log("blog.js is loaded"); //testing
-
 "use strict";
+
+console.log("appendBlogsToPage called with blogs:", blogs);
 
 // list of Blogs
 const blogs = [
