@@ -1,4 +1,7 @@
+console.log("blog.js is loaded"); //testing
+
 "use strict";
+
 // list of Blogs
 const blogs = [
     {
@@ -20,6 +23,8 @@ const blogs = [
 ];
 // Function to Iterate Over the List of Blogs
 function appendBlogsToPage(blogs) {
+    console.log("appendBlogsToPage called with blogs:", blogs); //testing
+
     // Access the blog container in the HTML
     const blogContainer = document.getElementById('blog-container');
     // check to see if it was properly found
