@@ -47,14 +47,14 @@ function appendBlogsToPage(blogs: Blog[]): void {
         const blogDiv = document.createElement('div');
         blogDiv.classList.add('blog-post'); 
 
-        // h1 element for the title
-        const blogTitle = document.createElement('h1');
-        blogTitle.textContent = blog.title;
-
         // a element for the link to the blog
         const blogLink = document.createElement('a');
         blogLink.href = `blogs/${blog.slug}.html`; // link to blog page with slug
         //blogLink.appendChild(blogTitle);
+
+        // h1 element for the title
+        const blogTitle = document.createElement('h1');
+        blogTitle.textContent = blog.title;
 
         blogLink.appendChild(blogTitle);
         blogDiv.appendChild(blogLink);
