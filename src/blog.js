@@ -1,5 +1,5 @@
 // list of Blogs
-const blogs = [
+var blogs = [
     {
         title: "My first blog",
         date: "10-15-2023",
@@ -20,27 +20,31 @@ const blogs = [
 // Function to Iterate Over the List of Blogs
 function appendBlogsToPage(blogs) {
     // Access the blog container in the HTML
-    const blogContainer = document.getElementById('blog-container');
+    var blogContainer = document.getElementById('blog-container');
     // check to see if it was properly found
     if (!blogContainer) {
         console.error("Blog container not found!");
         return;
     }
     // iterating
-    blogs.forEach(blog => {
+    blogs.forEach(function (blog) {
         // Logic for creating and appending blog elements
         // div for each blog post
-        const blogDiv = document.createElement('div');
+        var blogDiv = document.createElement('div');
         blogDiv.classList.add('blog-post');
         // h1 element for the title
-        const blogTitle = document.createElement('h1');
+        var blogTitle = document.createElement('h1');
         blogTitle.textContent = blog.title;
+        // a element for the link to the blog
+        var blogLink = document.createElement('a');
+        blogLink.href = "blogs/".concat(blog.slug, ".html"); // link to blog page with slug
+        blogLink.appendChild(blogTitle);
         // img element for the blog image
-        const blogImage = document.createElement('img');
+        var blogImage = document.createElement('img');
         blogImage.src = blog.image;
         blogImage.alt = blog.imageAlt;
         // p element for the description
-        const blogDescription = document.createElement('p');
+        var blogDescription = document.createElement('p');
         blogDescription.textContent = blog.description;
         // Append title, image, description to the blog div
         blogDiv.appendChild(blogTitle);
