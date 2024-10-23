@@ -1,5 +1,3 @@
-//console.log("appendBlogs:", blogs);
-
 // list of Blogs
 const blogs = [
     {
@@ -20,20 +18,17 @@ const blogs = [
     },
 ];
 // Function to Iterate Over the List of Blogs
-function appendBlogs(blogs) {
-    console.log("appendBlogs called with blogs:", blogs); //testing
-
+function appendBlogsToPage(blogs) {
     // Access the blog container in the HTML
     const blogContainer = document.getElementById('blog-container');
     // check to see if it was properly found
     if (!blogContainer) {
-        console.error("error with blog container");
+        console.error("Blog container not found!");
         return;
     }
     // iterating
     blogs.forEach(blog => {
         // Logic for creating and appending blog elements
-      
         // div for each blog post
         const blogDiv = document.createElement('div');
         blogDiv.classList.add('blog-post');
@@ -56,4 +51,4 @@ function appendBlogs(blogs) {
     });
 }
 ;
-appendBlogs(blogs);
+appendBlogsToPage(blogs);
