@@ -54,7 +54,10 @@ function appendBlogsToPage(blogs: Blog[]): void {
         // a element for the link to the blog
         const blogLink = document.createElement('a');
         blogLink.href = `blogs/${blog.slug}.html`; // link to blog page with slug
+        //blogLink.appendChild(blogTitle);
+
         blogLink.appendChild(blogTitle);
+        blogDiv.appendChild(blogLink);
 
         // img element for the blog image
         const blogImage = document.createElement('img');
@@ -66,7 +69,7 @@ function appendBlogsToPage(blogs: Blog[]): void {
         blogDescription.textContent = blog.description;
 
         // Append title, image, description to the blog div
-        blogDiv.appendChild(blogTitle);
+        //blogDiv.appendChild(blogTitle);
         blogDiv.appendChild(blogImage);
         blogDiv.appendChild(blogDescription);
 
