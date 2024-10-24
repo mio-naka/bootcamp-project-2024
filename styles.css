@@ -70,3 +70,10 @@ footer {
     padding: 1rem;
     font-size: 14px;
 }
+
+.blog-post img {
+    width: 100%; /* This makes the image take up 100% of the container width */
+    max-width: 500px; /* maximum width */
+    height: auto; 
+    border-radius: 10px; /* rounded corners */
+}
