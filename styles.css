@@ -71,9 +71,15 @@ footer {
     font-size: 14px;
 }
 
-.blog-post .individual-blog img {
-    width: 100%; /* This makes the image take up 100% of the container width */
+.blog-post img {
+    width: 100%; 
     max-width: 500px; /* maximum width */
     height: auto; 
     border-radius: 10px; /* rounded corners */
+}
+
+.individual-blog img {
+    max-width: 300px;
+    border-radius: 50%;
+    margin-right: 20px;
 }
