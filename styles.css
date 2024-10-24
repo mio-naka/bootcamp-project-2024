@@ -71,7 +71,7 @@ footer {
     font-size: 14px;
 }
 
-.blog-post img {
+.blog-post .individual-blog img {
     width: 100%; /* This makes the image take up 100% of the container width */
     max-width: 500px; /* maximum width */
     height: auto; 
