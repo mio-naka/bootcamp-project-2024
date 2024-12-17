@@ -1,0 +1,35 @@
+/* navbar.module.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #A8AD97;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navList li {
+    font-size: 1rem;
+  }
+  
+  .navList a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navList a:hover {
+    color: #ddd;
+  }  

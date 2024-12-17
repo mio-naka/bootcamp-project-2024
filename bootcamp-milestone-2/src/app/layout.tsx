@@ -2,6 +2,9 @@ import type { Metadata } from "next"; // Object to set metadata
 import { Inter } from "next/font/google"; // You can change the font to anything you want.
 import localFont from "next/font/local"; 
 import "./globals.css";
+import Navbar from "./components/navbar";
+
+//import Navbar from "@components/Navbar";
 
 
 // If you are experiencing an error "localFont is undefined", you might need to add the following blocks of code
@@ -23,16 +26,20 @@ export const metadata: Metadata = {
   title: "Mio's Personal Website",
   description: "A personal website for Mio.",
 };
-
+    
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
 		// returns boilerplate
+    // inter is the font
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}> 
+	      <Navbar/>
+      {children}
+      </body>
     </html>
   );
 }

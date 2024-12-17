@@ -1,0 +1,35 @@
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .ResumeList {
+
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 600px;
+}
+  
+  .ResumeList li {
+    font-size: 1rem;
+  }
+  
+  .downloadLink a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .downloadLink a:hover {
+    color: #ddd;
+  }  
+
+  .footer {
+    background-color: #A8AD97;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+  }
