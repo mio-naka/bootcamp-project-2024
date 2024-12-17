@@ -5,12 +5,11 @@ import blogs from '../blogData'; // Importing the blog data
 const Blog = () => {
   return (
     <div>
-      <h1>Welcome to My Blog</h1>
       <div>
         {blogs.map((blog) => (
           <BlogPreview 
-            key={blog.title}  // Add a unique key to each component
-            {...blog}         // Spread all properties from the blog object
+            key={blog.title} 
+            {...blog}  
           />
         ))}
       </div>
