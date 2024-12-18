@@ -1,5 +1,6 @@
 import React from 'react';
-import type { Blog } from "../blogData"; // Import Blog type for typing the props
+//import type { Blog } from "../database/blogSchema"; // Import Blog type for typing the props\
+import Blog from "../database/blogSchema";
 import Image from 'next/image'; // Import Next.js Image component for optimization
 import style from './blogPreview.module.css';
 
@@ -11,7 +12,7 @@ export default function BlogPreview(props: Blog) {
       <div>
         <Image src={props.image} alt={props.title} width={500} height={500} />
         <p>{props.description}</p>
-        <p>Posted on: {props.date}</p>
+        <p>Posted on: {new Date(props.date).toLocaleDateString()}</p>
       </div>
     </div>
   );
