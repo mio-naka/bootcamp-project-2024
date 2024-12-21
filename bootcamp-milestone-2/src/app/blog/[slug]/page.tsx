@@ -113,11 +113,7 @@ export default function Blog({ params }: Props) {
   const [user, setUser] = useState<string>(""); // store the user name
   const [comments, setComments] = useState<any[]>([]); // store the comments
 
-  // Access params.slug directly
-//   const { slug } = params;  // Directly access the `slug` parameter
-//   const slug = params.slug;
   const { slug } = params;  // Directly access the `slug` parameter
-
 
   // Fetch blog data initially when the component is mounted or slug changes
   useEffect(() => {
