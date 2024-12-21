@@ -41,4 +41,7 @@ const blogSchema = new Schema<Blog>({
 const Blog = mongoose.models['blogs'] ||
     mongoose.model('blogs', blogSchema);
 
+//const Blog = mongoose.models['blogs'] || mongoose.model<Blog & Document>('blogs', blogSchema);
+
+
 export default Blog;
