@@ -18,12 +18,13 @@ export default async function BlogListPage() {
             <h2>{blog.title}</h2>
             <p>{blog.description}</p>
             {/* <p></p> */}
-            <a href={`/blogs/${blog.slug}`} className={styles.link}>
+            <a href={`/blog/${blog.slug}`} className={styles.link}>
               Read More
             </a>
           </li>
         ))}
       </ul>
     </div>
+    
   );
 }
